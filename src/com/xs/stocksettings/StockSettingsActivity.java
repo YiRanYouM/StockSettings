@@ -2,26 +2,64 @@ package com.xs.stocksettings;
 
 import android.os.Bundle;
 import android.preference.*;
+import android.provider.Settings;
 import android.widget.Toast;
 
+import android.os.SystemProperties;
+
 public class StockSettingsActivity extends PreferenceActivity {
-	
+
 	private static final String ABOUT = "about";
-	
+	private static final String CRT = "screen_animation_style";
+	private static final String REBOOT = "advanced_reboot";
+
+	private static final String XS = SystemProperties.get("ro.build.display.id");
+	private static final String XS1 = SystemProperties.get("ro.weibo.com");
+
 	private Preference mAbout;
-	
-	public void onCreate (Bundle SavedInstanceState) {
+	private CheckBoxPreference mCrt;
+	private CheckBoxPreference mReboot;
+
+	public void onCreate(Bundle SavedInstanceState) {
 		super.onCreate(SavedInstanceState);
 		addPreferencesFromResource(R.xml.activity_stocksettings);
-		
+
 		mAbout = (Preference) findPreference(ABOUT);
+		mCrt = (CheckBoxPreference) findPreference(CRT);
+		mReboot = (CheckBoxPreference) findPreference(REBOOT);
 	}
-	
-	public boolean onPreferenceTreeClick (PreferenceScreen preferencescreen , Preference preference) {
+
+	public void onStart() {
+		super.onStart();
+		if (!this.XS.equals("11-20140805-SNAPSHOT-M9-bacon-XS") || !this.XS1.equals("weibo.com/acexs")) {
+			Toast.makeText(this, "æ‚¨çš„ROMä¼¼ä¹ä¸æ˜¯æ­£ç‰ˆROMï¼Œè¯·ä¸‹è½½XSçš„æ­£ç‰ˆä½œå“ï¼å¤šè°¢æ”¯æŒï¼é¡ºä¾¿é„™è§†ç›—ç‰ˆç‹—ï¼", 20000).show();
+			finish();
+		}
+	}
+
+	public boolean onPreferenceTreeClick(PreferenceScreen preferencescreen,
+			Preference preference) {
+
 		if (preference == mAbout) {
-			Toast.makeText(this, "¸½¼ÓÉèÖÃÓÉXS¿ª·¢£¬ÊÚÈ¨¸øĞ¡»ªÊ¹ÓÃ£¬ÑÏ½ûËûÈËµÁÇÔ£¡", 2000).show();
+			Toast.makeText(this, "é™„åŠ è®¾ç½®ç”±XSå¼€å‘ï¼Œä»…é™æœ¬äººåŠå°åä½¿ç”¨ï¼Œä¸¥ç¦ä»–äººç›—çªƒï¼", 2000).show();
+		}
+
+		if (preference == mCrt) {
+			if (mCrt.isChecked()) {
+				Settings.System.putInt(getContentResolver(), CRT, 0);
+			} else {
+				Settings.System.putInt(getContentResolver(), CRT, 1);
+			}
+		}
+
+		if (preference == mReboot) {
+			if (mReboot.isChecked()) {
+				Settings.Secure.putInt(getContentResolver(), REBOOT, 1);
+			} else {
+				Settings.Secure.putInt(getContentResolver(), REBOOT, 0);
+			}
 		}
 		return false;
 	}
-	
+
 }

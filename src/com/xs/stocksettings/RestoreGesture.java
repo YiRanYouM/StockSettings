@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-//¿ª»úÆô¶¯Àà£¬ºÚÆÁÊÖÊÆ¿ª»ú»Ö¸´Êı¾İ
+//å¼€æœºå¯åŠ¨ç±»ï¼Œé»‘å±æ‰‹åŠ¿å¼€æœºæ¢å¤æ•°æ®
 
 public class RestoreGesture extends BroadcastReceiver {
 	
