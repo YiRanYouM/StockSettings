@@ -1,6 +1,7 @@
 package com.xs.stocksettings;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.*;
 
@@ -17,6 +18,8 @@ public class GestureActivity extends PreferenceActivity {
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.activity_gesture);
+		
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		
 		mDoubleTapToWake = (CheckBoxPreference) findPreference(DOUBLE_TAP_TO_WAKE);
 		mCameraGesture = (CheckBoxPreference) findPreference(CAMERA_GESTURE);

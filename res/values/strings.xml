@@ -29,5 +29,11 @@
     <string name="focus_sound_summary_off">对焦声音已关闭！</string>
     <string name="focus_sound_summary_on">对焦声音已开启！</string>
     <string name="camera">相机声音</string>
+    <string name="camera_switch">相机切换</string>
+    <string name="cm_camera">CM相机</string>
+    <string name="nubia_camera">努比亚相机</string>
+    <string name="miui_camera">MIUI相机</string>
+    <string name="camera_switch_warning">注意事项</string>
+    <string name="camera_switch_warning_summary">默认相机为CM相机，如果你更改了其他相机，建议每次OTA的时候都切换回CM相机，以防OTA失败！</string>
 
 </resources>

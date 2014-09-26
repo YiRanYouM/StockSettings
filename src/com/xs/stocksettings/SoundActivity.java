@@ -1,9 +1,11 @@
 package com.xs.stocksettings;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 
 public class SoundActivity extends PreferenceActivity {
@@ -19,6 +21,8 @@ public class SoundActivity extends PreferenceActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.activity_sound);
+		
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
 		mCameraSound = (CheckBoxPreference) findPreference(KEY_CAMERA_SOUND);
 		mRecordSound = (CheckBoxPreference) findPreference(KEY_RECORD_SOUND);

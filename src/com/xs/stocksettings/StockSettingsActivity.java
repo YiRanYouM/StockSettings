@@ -15,6 +15,7 @@ public class StockSettingsActivity extends PreferenceActivity {
 
 	private static final String XS = SystemProperties.get("ro.build.display.id");
 	private static final String XS1 = SystemProperties.get("ro.weibo.com");
+	private static final String XS2 = SystemProperties.get("ro.product.mod_device");
 
 	private Preference mAbout;
 	private CheckBoxPreference mCrt;
@@ -31,7 +32,7 @@ public class StockSettingsActivity extends PreferenceActivity {
 
 	public void onStart() {
 		super.onStart();
-		if (!this.XS.equals("11-20140805-SNAPSHOT-M9-bacon-XS") || !this.XS1.equals("weibo.com/acexs")) {
+		if (!this.XS.equals("11-20140805-SNAPSHOT-M9-bacon-XS") || !this.XS1.equals("weibo.com/acexs") || !this.XS2.equals("bacon_xs")) {
 			Toast.makeText(this, "您的ROM似乎不是正版ROM，请下载XS的正版作品！多谢支持！顺便鄙视盗版狗！", 20000).show();
 			finish();
 		}
