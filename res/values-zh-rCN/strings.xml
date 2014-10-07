@@ -1,18 +1,6 @@
 <resources>
 
     <string name="app_name">附加设置</string>
-    <string name="gesture">黑屏手势</string>
-    <string name="gesture_warning">说明</string>
-    <string name="gesture_warning_summary">一加MIUI黑屏手势由XS独创，仅限本人及小华使用，严禁他人未经允许使用或二次修改！</string>
-    <string name="double_tap_to_wake">双击唤醒</string>
-    <string name="double_tap_to_wake_summary_off">已关闭！</string>
-    <string name="double_tap_to_wake_summary_on">已开启！</string>
-    <string name="camera_gesture">圆圈打开相机</string>
-    <string name="camera_gesture_summary_off">已关闭！</string>
-    <string name="camera_gesture_summary_on">已开启！</string>
-    <string name="music_gesture">双竖线播放/暂停音乐</string>
-    <string name="music_gesture_summary_off">已关闭！</string>
-    <string name="music_gesture_summary_on">已开启！</string>
 	<string name="myappscreenmask">护目镜</string>
     <string name="mipop">屏幕助手</string>
     <string name="about">关于</string>

@@ -4,7 +4,6 @@
     android:versionName="1.0"
     android:sharedUserId="android.uid.system" >
     
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" ></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" ></uses-permission>
 
@@ -28,23 +27,12 @@
         </activity>
         
         <activity
-            android:name=".GestureActivity" >
-        </activity>
-        
-        <activity
             android:name=".SoundActivity" >
         </activity>
         
         <activity
             android:name=".CameraSwitchActivity" >
         </activity>
-        
-        <!-- 系统开机时恢复手势数据 -->
-        <receiver android:name=".RestoreGesture" >
-            <intent-filter android:priority="0" >
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
         
     </application>
 

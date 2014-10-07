@@ -2,10 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <CheckBoxPreference
-        android:key="screen_animation_style"
-        android:title="CRT" >
-    </CheckBoxPreference>
-    <CheckBoxPreference
         android:key="advanced_reboot"
         android:title="@string/reboot" >
     </CheckBoxPreference>
@@ -27,13 +23,6 @@
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.xs.stocksettings.CameraSwitchActivity"
-            android:targetPackage="com.xs.stocksettings" >
-        </intent>
-    </Preference>
-    <Preference android:title="@string/gesture" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.xs.stocksettings.GestureActivity"
             android:targetPackage="com.xs.stocksettings" >
         </intent>
     </Preference>

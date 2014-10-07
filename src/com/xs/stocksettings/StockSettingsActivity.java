@@ -10,7 +10,6 @@ import android.os.SystemProperties;
 public class StockSettingsActivity extends PreferenceActivity {
 
 	private static final String ABOUT = "about";
-	private static final String CRT = "screen_animation_style";
 	private static final String REBOOT = "advanced_reboot";
 
 	private static final String XS = SystemProperties.get("ro.build.display.id");
@@ -18,7 +17,6 @@ public class StockSettingsActivity extends PreferenceActivity {
 	private static final String XS2 = SystemProperties.get("ro.product.mod_device");
 
 	private Preference mAbout;
-	private CheckBoxPreference mCrt;
 	private CheckBoxPreference mReboot;
 
 	public void onCreate(Bundle SavedInstanceState) {
@@ -26,7 +24,6 @@ public class StockSettingsActivity extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.activity_stocksettings);
 
 		mAbout = (Preference) findPreference(ABOUT);
-		mCrt = (CheckBoxPreference) findPreference(CRT);
 		mReboot = (CheckBoxPreference) findPreference(REBOOT);
 	}
 
@@ -43,14 +40,6 @@ public class StockSettingsActivity extends PreferenceActivity {
 
 		if (preference == mAbout) {
 			Toast.makeText(this, R.string.tap_about, 2000).show();
-		}
-
-		if (preference == mCrt) {
-			if (mCrt.isChecked()) {
-				Settings.System.putInt(getContentResolver(), CRT, 0);
-			} else {
-				Settings.System.putInt(getContentResolver(), CRT, 1);
-			}
 		}
 
 		if (preference == mReboot) {
