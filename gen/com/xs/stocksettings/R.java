@@ -49,6 +49,7 @@ public final class R {
         public static final int record_sound=0x7f040014;
         public static final int record_sound_summary_off=0x7f040018;
         public static final int record_sound_summary_on=0x7f040019;
+        public static final int tap_about=0x7f040023;
     }
     public static final class xml {
         public static final int activity_camera_switch=0x7f030000;

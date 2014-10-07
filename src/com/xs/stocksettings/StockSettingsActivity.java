@@ -42,7 +42,7 @@ public class StockSettingsActivity extends PreferenceActivity {
 			Preference preference) {
 
 		if (preference == mAbout) {
-			Toast.makeText(this, "附加设置由XS开发，仅限本人及小华使用，严禁他人盗窃！", 2000).show();
+			Toast.makeText(this, R.string.tap_about, 2000).show();
 		}
 
 		if (preference == mCrt) {
