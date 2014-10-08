@@ -1,39 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <CheckBoxPreference
-        android:key="advanced_reboot"
-        android:title="@string/reboot" >
-    </CheckBoxPreference>
+    <PreferenceCategory android:title="@string/system" >
+        <CheckBoxPreference
+            android:key="advanced_reboot"
+            android:title="@string/reboot" />
 
-    <Preference android:title="@string/mipop" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.android.mipop.MIPopActivity"
-            android:targetPackage="com.android.mipop" />
-    </Preference>
-    <Preference android:title="@string/camera" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.xs.stocksettings.SoundActivity"
-            android:targetPackage="com.xs.stocksettings" >
-        </intent>
-    </Preference>
-    <Preference android:title="@string/camera_switch" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.xs.stocksettings.CameraSwitchActivity"
-            android:targetPackage="com.xs.stocksettings" >
-        </intent>
-    </Preference>
-    <Preference
-        android:summary="@string/qq_group_summary"
-        android:title="@string/qq_group" >
-    </Preference>
-    <Preference
-        android:key="about"
-        android:summary="© Oneplus MIUI Tools | Powered by Xs"
-        android:title="@string/about" >
-    </Preference>
+        <PreferenceScreen android:title="@string/cm_settings" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.settings_ex.DisplaySettings"
+                android:targetPackage="com.android.settings_ex" />
+        </PreferenceScreen>
+
+        <Preference android:title="@string/mipop" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.mipop.MIPopActivity"
+                android:targetPackage="com.android.mipop" />
+        </Preference>
+        <Preference android:title="@string/camera" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.xs.stocksettings.SoundActivity"
+                android:targetPackage="com.xs.stocksettings" >
+            </intent>
+        </Preference>
+        <Preference android:title="@string/camera_switch" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.xs.stocksettings.CameraSwitchActivity"
+                android:targetPackage="com.xs.stocksettings" >
+            </intent>
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/author" >
+        <Preference
+            android:summary="@string/author_xs_summary"
+            android:title="@string/author_xs" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://weibo.com/acexs" />
+        </Preference>
+        <Preference
+            android:summary="@string/qq_group_summary"
+            android:title="@string/qq_group" >
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/version" >
+        <Preference
+            android:key="about"
+            android:summary="© Oneplus MIUI Tools | Powered by Xs"
+            android:title="@string/about" >
+        </Preference>
+    </PreferenceCategory>
 
 </PreferenceScreen>

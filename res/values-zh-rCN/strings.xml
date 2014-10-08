@@ -24,5 +24,10 @@
     <string name="camera_switch_warning">注意事项</string>
     <string name="camera_switch_warning_summary">默认相机为CM相机，如果你更改了其他相机，建议每次OTA的时候都切换回CM相机，以防OTA失败！</string>
     <string name="tap_about">附加设置由XS开发，仅限本人及小华使用，严禁他人盗窃！</string>
-    
+    <string name="cm_settings">原厂设置</string>
+    <string name="system">系统</string>
+    <string name="version">版本信息</string>
+    <string name="author">作者信息</string>
+    <string name="author_xs">XS</string>
+    <string name="author_xs_summary">点击访问我的微博</string>
 </resources>
