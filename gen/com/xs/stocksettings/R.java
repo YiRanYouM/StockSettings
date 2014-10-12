@@ -35,6 +35,9 @@ public final class R {
         public static final int miui_camera=0x7f040014;
         public static final int myappscreenmask=0x7f040001;
         public static final int nubia_camera=0x7f040013;
+        public static final int proximity=0x7f04001e;
+        public static final int proximity_summaryOff=0x7f040020;
+        public static final int proximity_summaryOn=0x7f04001f;
         public static final int qq_group=0x7f040004;
         public static final int qq_group_summary=0x7f040005;
         public static final int reboot=0x7f040006;

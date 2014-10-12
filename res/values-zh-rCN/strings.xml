@@ -30,4 +30,7 @@
     <string name="author">作者信息</string>
     <string name="author_xs">XS</string>
     <string name="author_xs_summary">点击访问我的微博</string>
+    <string name="proximity">来电亮屏</string>
+    <string name="proximity_summaryOn">手动亮屏</string>
+    <string name="proximity_summaryOff">自动亮屏</string>
 </resources>

@@ -5,6 +5,11 @@
         <CheckBoxPreference
             android:key="advanced_reboot"
             android:title="@string/reboot" />
+        <CheckBoxPreference
+            android:summaryOn="@string/proximity_summaryOn"
+            android:summaryOff="@string/proximity_summaryOff"
+            android:key="proximity_on_wake"
+            android:title="@string/proximity" />
 
         <PreferenceScreen android:title="@string/cm_settings" >
             <intent

@@ -30,5 +30,8 @@
     <string name="author">Author Info</string>
     <string name="author_xs">XS</string>
     <string name="author_xs_summary"></string>
+    <string name="proximity">Proximity</string>
+    <string name="proximity_summaryOn">On</string>
+    <string name="proximity_summaryOff">Off</string>
 
 </resources>
