@@ -17,12 +17,6 @@
     <string name="focus_sound_summary_off">Off</string>
     <string name="focus_sound_summary_on">On</string>
     <string name="camera">Camera Sound</string>
-    <string name="camera_switch">Camera Switch</string>
-    <string name="cm_camera">CyanogenMod Camera</string>
-    <string name="nubia_camera">Nubia Camera</string>
-    <string name="miui_camera">MIUI Camera</string>
-    <string name="camera_switch_warning">Warning</string>
-    <string name="camera_switch_warning_summary">The CM camera is set as default. If you switch to other cameras, it is recommended that you switch back before applying OTA incremental updates to avoid failures.</string>
     <string name="tap_about">Author:XS</string>
     <string name="cm_settings">CyanogenMod Settings</string>
     <string name="system">System</string>
@@ -30,8 +24,5 @@
     <string name="author">Author Info</string>
     <string name="author_xs">XS</string>
     <string name="author_xs_summary"></string>
-    <string name="proximity">Proximity</string>
-    <string name="proximity_summaryOn">On</string>
-    <string name="proximity_summaryOff">Off</string>
 
 </resources>
