@@ -2,9 +2,12 @@ package com.xs.stocksettings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.*;
+import android.preference.CheckBoxPreference;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 
-public class CameraSound extends PreferenceActivity {
+public class CameraSound extends miui.preference.PreferenceActivity {
 
     private static final String KEY_CAMERA_SOUND = "camera_sound";
     private static final String KEY_RECORD_SOUND = "record_sound";
@@ -15,6 +18,7 @@ public class CameraSound extends PreferenceActivity {
     private CheckBoxPreference mFocusSound;
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setTheme(miui.R.style.Theme_Light_Settings);
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.camera_sound);
 
