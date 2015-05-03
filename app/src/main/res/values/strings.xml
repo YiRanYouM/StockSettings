@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">Stock Settings</string>
+    <string name="about">About</string>
+    <string name="camera">Camera Sound</string>
+    <string name="camera_sound">Camera Sound</string>
+    <string name="record_sound">Record Sound</string>
+    <string name="focus_sound">Focus Sound</string>
+    <string name="camera_sound_summary_off">Off</string>
+    <string name="camera_sound_summary_on">On</string>
+    <string name="record_sound_summary_off">Off</string>
+    <string name="record_sound_summary_on">On</string>
+    <string name="focus_sound_summary_off">Off</string>
+    <string name="focus_sound_summary_on">On</string>
+    <string name="warning">Warning!</string>
+    <string name="warning_summary">Shutter sound is compulsory in some regions.\nPlease abide strictly by the laws, rules and regulations of your area.</string>
+    <string name="author_xs">XS</string>
+    <string name="author_xs_summary">Click here to view my sina weibo</string>
+    <string name="qq_group">Tencent QQ Group</string>
+    <string name="qq_group_summary">385221332(1) 133250930(2)</string>
+    <string name="cm_settings">CyanogenMod Settings</string>
+
+</resources>
