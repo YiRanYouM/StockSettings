@@ -14,10 +14,6 @@
     <string name="focus_sound_summary_on">On</string>
     <string name="warning_title">Warning!</string>
     <string name="warning_summary">Shutter sound is compulsory in some regions.\nPlease abide strictly by the laws, rules and regulations of your area.</string>
-    <string name="author_xs_title">XS</string>
-    <string name="author_xs_summary">Click here to view my sina weibo</string>
-    <string name="qq_group_title">Tencent QQ Group</string>
-    <string name="qq_group_summary">385221332(1) 133250930(2)</string>
     <string name="cm_settings_title">CyanogenMod Settings</string>
     <string name="density_title">Screen DPI</string>
     <string name="density_error">Warning:Input Error!</string>

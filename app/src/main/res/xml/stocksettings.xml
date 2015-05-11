@@ -24,23 +24,12 @@
         android:key="density_key"
         android:title="@string/density_title"/>
 
-        <Preference
-            android:summary="@string/author_xs_summary"
-            android:title="@string/author_xs_title" >
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://weibo.com/acexs" />
-        </Preference>
-        <Preference
-            android:enabled="false"
-            android:summary="@string/qq_group_summary"
-            android:title="@string/qq_group_title" >
-        </Preference>
-
     <Preference
-        android:enabled="false"
-        android:key="about_key"
-        android:summary="© Oneplus MIUI Tools | Powered by Xs"
-        android:title="@string/about_title" />
+        android:summary="© 2015 Oneplus MIUI Tools | Powered by Xs"
+        android:title="@string/about_title" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://weibo.com/acexs" />
+    </Preference>>
 
 </PreferenceScreen>
