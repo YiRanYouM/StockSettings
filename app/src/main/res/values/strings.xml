@@ -19,5 +19,14 @@
     <string name="qq_group">Tencent QQ Group</string>
     <string name="qq_group_summary">385221332(1) 133250930(2)</string>
     <string name="cm_settings">CyanogenMod Settings</string>
+    <string name="density_title">Screen DPI</string>
+    <string name="density_error">Warning:Input Error!</string>
+    <string name="density_edit_title">Adjust the DPI specified</string>
+    <string name="density_edit_message">please enter a reasonable range of values(300-600)</string>
+    <string name="dialog_ok">Done!Are you sure want to reboot the phone?</string>
+    <string name="dialog_message">hot reboot</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_reboot">Please restart your mobile phone manually in some time later</string>
 
 </resources>

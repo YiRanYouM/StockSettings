@@ -17,6 +17,13 @@
                 android:targetPackage="com.xs.stocksettings" />
         </Preference>
 
+    <EditTextPreference
+        android:dialogTitle="@string/density_edit_title"
+        android:dialogMessage="@string/density_edit_message"
+        android:digits="1234567890"
+        android:key="density_key"
+        android:title="@string/density_title"/>
+
         <Preference
             android:summary="@string/author_xs_summary"
             android:title="@string/author_xs" >

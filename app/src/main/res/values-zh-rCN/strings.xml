@@ -19,5 +19,14 @@
     <string name="qq_group">交流群</string>
     <string name="qq_group_summary">385221332(1) 133250930(2)，欢迎进群交流</string>
     <string name="cm_settings">原厂设置</string>
+    <string name="density_error">警告，输入密度值超出范围，请重新输入</string>
+    <string name="density_title">屏幕密度</string>
+    <string name="density_edit_title">屏幕密度修改</string>
+    <string name="density_edit_message">请输入一个合理的密度值（300-600）</string>
+    <string name="dialog_ok">应用成功，是否重启手机？</string>
+    <string name="dialog_message">注意：本次重启为热重启！</string>
+    <string name="dialog_yes">确定</string>
+    <string name="dialog_no">取消</string>
+    <string name="dialog_reboot">请在稍晚些时刻手动重启手机</string>
 
 </resources>
