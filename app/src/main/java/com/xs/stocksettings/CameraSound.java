@@ -9,9 +9,9 @@ import android.preference.PreferenceScreen;
 
 public class CameraSound extends miui.preference.PreferenceActivity {
 
-    private static final String KEY_CAMERA_SOUND = "camera_sound";
-    private static final String KEY_RECORD_SOUND = "record_sound";
-    private static final String KEY_FOCUS_SOUND = "focus_sound";
+    private static final String KEY_CAMERA_SOUND = "camera_sound_key";
+    private static final String KEY_RECORD_SOUND = "record_sound_key";
+    private static final String KEY_FOCUS_SOUND = "focus_sound_key";
 
     private CheckBoxPreference mCameraSound;
     private CheckBoxPreference mRecordSound;

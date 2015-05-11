@@ -41,9 +41,9 @@ public class StockSettings extends miui.preference.PreferenceActivity{
 
         //启动验证
         if (!this.XS.equals("bacon_xs")) {
-            getPreferenceScreen().removePreference(findPreference("cm_settings"));
-            getPreferenceScreen().removePreference(findPreference("about"));
-            getPreferenceScreen().removePreference(findPreference("camera"));
+            getPreferenceScreen().removePreference(findPreference("cm_settings_key"));
+            getPreferenceScreen().removePreference(findPreference("about_key"));
+            getPreferenceScreen().removePreference(findPreference("camera_key"));
             getPreferenceScreen().removePreference(findPreference("density_key"));
         }
     }

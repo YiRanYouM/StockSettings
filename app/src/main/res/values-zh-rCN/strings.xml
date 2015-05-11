@@ -1,24 +1,24 @@
 <resources>
 
     <string name="app_name">附加设置</string>
-    <string name="about">关于</string>
-    <string name="camera">相机声音</string>
-    <string name="camera_sound">拍照声音</string>
-    <string name="record_sound">录像声音</string>
-    <string name="focus_sound">对焦声音</string>
+    <string name="about_title">关于</string>
+    <string name="camera_title">相机声音</string>
+    <string name="camera_sound_title">拍照声音</string>
+    <string name="record_sound_title">录像声音</string>
+    <string name="focus_sound_title">对焦声音</string>
     <string name="camera_sound_summary_off">拍照声音已关闭！</string>
     <string name="camera_sound_summary_on">拍照声音已开启！</string>
     <string name="record_sound_summary_off">录像声音已关闭！</string>
     <string name="record_sound_summary_on">录像声音已开启！</string>
     <string name="focus_sound_summary_off">对焦声音已关闭！</string>
     <string name="focus_sound_summary_on">对焦声音已开启！</string>
-    <string name="warning">警告！</string>
+    <string name="warning_title">警告！</string>
     <string name="warning_summary">停用相机声音在某些国家属于违法行为，请严谨遵守当地法律！</string>
-    <string name="author_xs">XS</string>
+    <string name="author_xs_title">XS</string>
     <string name="author_xs_summary">点击访问我的微博</string>
-    <string name="qq_group">交流群</string>
+    <string name="qq_group_title">交流群</string>
     <string name="qq_group_summary">385221332(1) 133250930(2)，欢迎进群交流</string>
-    <string name="cm_settings">原厂设置</string>
+    <string name="cm_settings_title">原厂设置</string>
     <string name="density_error">警告，输入密度值超出范围，请重新输入</string>
     <string name="density_title">屏幕密度</string>
     <string name="density_edit_title">屏幕密度修改</string>

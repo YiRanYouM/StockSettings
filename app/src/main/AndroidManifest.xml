@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:label="@string/camera" android:name=".CameraSound" />
+        <activity android:label="@string/camera_title" android:name=".CameraSound" />
 
     </application>
 
