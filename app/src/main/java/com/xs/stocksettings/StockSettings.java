@@ -34,14 +34,19 @@ public class StockSettings extends miui.preference.PreferenceActivity{
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 String NewDensity = (String) newValue;
-                int i = Integer.parseInt(NewDensity);
-                if (i < 300 || i > 600) {
+                if (NewDensity.equals("")) {
                     Toast.makeText(getBaseContext(),R.string.density_error,Toast.LENGTH_LONG).show();
                     return false;
+                } else {
+                    int i = Integer.parseInt(NewDensity);
+                    if (i < 300 || i > 600) {
+                        Toast.makeText(getBaseContext(), R.string.density_error, Toast.LENGTH_LONG).show();
+                        return false;
+                    }
+                    DialogReboot();
+                    RootCmd.RunRootCmd("setprop persist.xsdensity " + NewDensity + "");
+                    return true;
                 }
-                DialogReboot();
-                RootCmd.RunRootCmd("setprop persist.xsdensity " + NewDensity + "");
-                return true;
             }
         });
 
