@@ -24,5 +24,6 @@
     <string name="dialog_yes">确定</string>
     <string name="dialog_no">取消</string>
     <string name="dialog_reboot">请在稍晚些时刻手动重启手机</string>
+    <string name="key_home_double_tap_action_title">双击Home锁屏</string>
 
 </resources>

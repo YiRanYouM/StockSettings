@@ -5,16 +5,21 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.DialogPreference;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
+import android.provider.Settings;
 import android.widget.Toast;
 
 public class StockSettings extends miui.preference.PreferenceActivity{
 
     private static final String XS = SystemProperties.get("ro.product.mod_device");
+    private static final String KEYHOMEDOUBLETAPACTION = "key_home_double_tap_action";
     private EditTextPreference mDensity;
+    private CheckBoxPreference mKeyHomeDoubleTapAction;
 
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(miui.R.style.Theme_Light_Settings);
@@ -23,6 +28,7 @@ public class StockSettings extends miui.preference.PreferenceActivity{
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         mDensity = (EditTextPreference) findPreference("density_key");
+        mKeyHomeDoubleTapAction = (CheckBoxPreference) findPreference(KEYHOMEDOUBLETAPACTION);
 
         mDensity.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -41,11 +47,19 @@ public class StockSettings extends miui.preference.PreferenceActivity{
 
         //启动验证
         if (!this.XS.equals("bacon_xs")) {
-            getPreferenceScreen().removePreference(findPreference("cm_settings_key"));
-            getPreferenceScreen().removePreference(findPreference("about_key"));
-            getPreferenceScreen().removePreference(findPreference("camera_key"));
-            getPreferenceScreen().removePreference(findPreference("density_key"));
+            getPreferenceScreen().removeAll();
         }
+    }
+
+    public boolean onPreferenceTreeClick (PreferenceScreen preferencescreen, Preference preference) {
+        if (preference == mKeyHomeDoubleTapAction) {
+            if(mKeyHomeDoubleTapAction.isChecked()){
+                Settings.System.putInt(getContentResolver(),KEYHOMEDOUBLETAPACTION,8);
+            } else {
+                Settings.System.putInt(getContentResolver(),KEYHOMEDOUBLETAPACTION,0);
+            }
+        }
+        return false;
     }
 
     public void DialogReboot() {

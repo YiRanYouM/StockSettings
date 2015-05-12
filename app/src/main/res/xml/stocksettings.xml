@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <CheckBoxPreference
+        android:key="key_home_double_tap_action"
+        android:title="@string/key_home_double_tap_action_title" />
+
     <PreferenceScreen android:key="cm_settings_key" android:title="@string/cm_settings_title" >
         <intent
             android:action="android.intent.action.MAIN"

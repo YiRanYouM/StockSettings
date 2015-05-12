@@ -24,5 +24,6 @@
     <string name="dialog_yes">Yes</string>
     <string name="dialog_no">No</string>
     <string name="dialog_reboot">Please restart your mobile phone manually in some time later</string>
+    <string name="key_home_double_tap_action_title">Double tap home to wake off</string>
 
 </resources>
