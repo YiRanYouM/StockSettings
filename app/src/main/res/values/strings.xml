@@ -18,7 +18,7 @@
     <string name="density_title">Screen DPI</string>
     <string name="density_error">Warning:Input Error!</string>
     <string name="density_edit_title">Adjust the DPI specified</string>
-    <string name="density_edit_message">please enter a reasonable range of values(300-600)</string>
+    <string name="density_edit_message">please enter a reasonable range of values(300-600)\nThis operation may lead to frequent system FC, careful revision</string>
     <string name="dialog_ok">Done!Are you sure want to reboot the phone?</string>
     <string name="dialog_message">hot reboot</string>
     <string name="dialog_yes">Yes</string>
