@@ -21,6 +21,13 @@
                 android:targetPackage="com.xs.stocksettings" />
         </Preference>
 
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/camera_switch_entries"
+        android:entryValues="@array/camera_switch_values"
+        android:title="@string/camera_switch_title"
+        android:key="camera_switch_key" />
+
     <EditTextPreference
         android:dialogTitle="@string/density_edit_title"
         android:dialogMessage="@string/density_edit_message"

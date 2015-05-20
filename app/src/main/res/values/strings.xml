@@ -25,5 +25,9 @@
     <string name="dialog_no">No</string>
     <string name="dialog_reboot">Please restart your mobile phone manually in some time later</string>
     <string name="key_home_double_tap_action_title">Double tap home to wake off</string>
+    <string name="camera_switch_title">Camera Switch</string>
+    <string name="camera_switch_color_summary">Color Camera</string>
+    <string name="camera_switch_miui_summary">MIUI Camera</string>
+    <string name="camera_switch_cm_summary">CM Camera</string>
 
 </resources>

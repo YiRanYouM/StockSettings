@@ -25,5 +25,9 @@
     <string name="dialog_no">取消</string>
     <string name="dialog_reboot">请在稍晚些时刻手动重启手机</string>
     <string name="key_home_double_tap_action_title">双击Home锁屏</string>
+    <string name="camera_switch_title">相机切换</string>
+    <string name="camera_switch_color_summary">当前相机为Color相机</string>
+    <string name="camera_switch_miui_summary">当前相机为MIUI相机</string>
+    <string name="camera_switch_cm_summary">当前相机为CM相机</string>
 
 </resources>
