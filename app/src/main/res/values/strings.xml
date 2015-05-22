@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Coolpad Settings</string>
+    <string name="about_title">About</string>
+    <string name="app_screen_mask_title">App Screen Mask</string>
+    <string name="sound_patch_title">Sound Patch</string>
+    <string name="sound_patch_summary">Click to patch default audio level</string>
+    <string name="sound_patch_toast">OK!</string>
+    <string name="confirm">Confirm?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="systemui_style_title">SystemUI Style</string>
+    <string name="systemui_default">Default | No Weather...</string>
+    <string name="systemui_diy">DIY | Weather Music...</string>
+    <string name="replace_toast">Replace Done!Please Reboot Phone!</string>
+    <string name="storage_title">Storage Switch</string>
+    <string name="storage_internal">Internal Storage</string>
+    <string name="storage_external">External Storage</string>
+    <string name="density_title">Screen DPI</string>
+    <string name="density_error">Warning:Input Error!</string>
+    <string name="density_edit_title">Adjust the DPI specified</string>
+    <string name="density_edit_message">please enter a reasonable range of values(280-320)</string>
+    <string name="dialog_ok">Done!Are you sure want to reboot the phone?</string>
+    <string name="dialog_message">hot reboot</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_reboot">Please restart your mobile phone manually in some time later</string>
+
+</resources>

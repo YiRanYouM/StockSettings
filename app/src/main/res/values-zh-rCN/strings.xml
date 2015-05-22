@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">酷派设置</string>
+    <string name="about_title">关于</string>
+    <string name="app_screen_mask_title">护目镜</string>
+    <string name="sound_patch_title">声音补丁</string>
+    <string name="sound_patch_summary">增大默认音量等级</string>
+    <string name="sound_patch_toast">应用成功，请重启您的手机！</string>
+    <string name="confirm">确定？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="systemui_style_title">状态栏风格</string>
+    <string name="systemui_default">默认风格 | 无天气、农历、音乐...</string>
+    <string name="systemui_diy">自定风格 | 状态栏显示天气和农历等</string>
+    <string name="replace_toast">应用成功，请重启您的手机</string>
+    <string name="storage_title">默认存储切换</string>
+    <string name="storage_external">外置存储</string>
+    <string name="storage_internal">内置存储</string>
+    <string name="density_error">警告，输入密度值超出范围，请重新输入</string>
+    <string name="density_title">屏幕密度</string>
+    <string name="density_edit_title">屏幕密度修改</string>
+    <string name="density_edit_message">请输入一个合理的密度值（280-320）</string>
+    <string name="dialog_ok">应用成功，是否重启手机？</string>
+    <string name="dialog_message">注意：本次重启为热重启！</string>
+    <string name="dialog_yes">确定</string>
+    <string name="dialog_no">取消</string>
+    <string name="dialog_reboot">请在稍晚些时刻手动重启手机</string>
+
+</resources>

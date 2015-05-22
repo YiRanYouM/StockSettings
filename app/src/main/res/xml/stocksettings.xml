@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference android:title="@string/app_screen_mask_title" android:key="appscreen_key" >
+        <intent
+            android:targetClass="cn.mixiaoxiao.myappscreenmask.MainActivity"
+            android:targetPackage="cn.mixiaoxiao.myappscreenmask" />
+    </Preference>
+
+    <EditTextPreference
+        android:dialogTitle="@string/density_edit_title"
+        android:dialogMessage="@string/density_edit_message"
+        android:digits="1234567890"
+        android:key="density_key"
+        android:title="@string/density_title"/>
+
+    <Preference
+        android:key="sound_patch_key"
+        android:summary="@string/sound_patch_summary"
+        android:title="@string/sound_patch_title" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/systemui_entries"
+        android:entryValues="@array/systemui_values"
+        android:key="systemui_style_key"
+        android:title="@string/systemui_style_title" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/storage_entries"
+        android:entryValues="@array/storage_values"
+        android:key="storage_key"
+        android:title="@string/storage_title" />
+
+    <Preference
+        android:summary="© 2015 CP MIUI Tools | Powered by Xs"
+        android:title="@string/about_title" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://weibo.com/acexs" />
+    </Preference>>
+
+</PreferenceScreen>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="systemui_entries">
+        <item>默认风格 | 无天气、农历、音乐</item>
+        <item>自定风格 | 通知栏显示天气和农历等</item>
+    </string-array>
+    <string-array name="systemui_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="storage_entries">
+        <item>内置存储</item>
+        <item>外置存储</item>
+    </string-array>
+    <string-array name="storage_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+</resources>
