@@ -14,7 +14,7 @@ import android.preference.EditTextPreference;
 
 import miui.preference.PreferenceActivity;
 
-public class StockSettings extends PreferenceActivity implements Preference.OnPreferenceChangeListener{
+public class StockSettings extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
     private static final String XS = SystemProperties.get("ro.product.mod_device");
     private static final String SOUND = "sound_patch_key";
@@ -46,12 +46,12 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 String NewDensity = (String) newValue;
                 if (NewDensity.equals("")) {
-                    Toast.makeText(getBaseContext(),R.string.density_error,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), R.string.density_error, Toast.LENGTH_LONG).show();
                     return false;
                 } else {
                     int i = Integer.parseInt(NewDensity);
                     if (i < 280 || i > 320) {
-                        Toast.makeText(getBaseContext(),R.string.density_error,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), R.string.density_error, Toast.LENGTH_LONG).show();
                         return false;
                     }
                 }
@@ -163,24 +163,24 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
         return true;
     }
 
-        public void DialogReboot() {
-                new AlertDialog.Builder(this)
-                                .setMessage(R.string.dialog_message)
-                                .setTitle(R.string.dialog_ok)
-                                .setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                        RootCmd.RunRootCmd("busybox killall system_server");
-                                    }
-                            })
-                                .setNeutralButton(R.string.dialog_no, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                        Toast.makeText(getApplicationContext(),R.string.dialog_reboot,Toast.LENGTH_LONG).show();
-                                        dialog.dismiss();
-                                    }
-                            })
-                                .show();
-        }
+    public void DialogReboot() {
+        new AlertDialog.Builder(this)
+                .setMessage(R.string.dialog_message)
+                .setTitle(R.string.dialog_ok)
+                .setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        RootCmd.RunRootCmd("busybox killall system_server");
+                    }
+                })
+                .setNeutralButton(R.string.dialog_no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), R.string.dialog_reboot, Toast.LENGTH_LONG).show();
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
 
 }
