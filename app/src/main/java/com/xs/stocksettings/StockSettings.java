@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
@@ -21,7 +22,7 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
     private static final String SYSTEMUI = "systemui_style_key";
     private static final String STORAGE = "storage_key";
 
-    private Preference mSound;
+    private CheckBoxPreference mSound;
     private ListPreference mSystemUI;
     private ListPreference mStorage;
     private EditTextPreference mDensity;
@@ -32,7 +33,7 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
         addPreferencesFromResource(R.xml.stocksettings);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        mSound = (Preference) findPreference(SOUND);
+        mSound = (CheckBoxPreference) findPreference(SOUND);
         mDensity = (EditTextPreference) findPreference("density_key");
         mSystemUI = (ListPreference) findPreference(SYSTEMUI);
         mStorage = (ListPreference) findPreference(STORAGE);
@@ -70,9 +71,15 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
                                          Preference preference) {
 
         if (preference == mSound) {
-            RootCmd.RunRootCmd("mount -o remount,rw /data");
-            RootCmd.RunRootCmd("cp -r /system/stocksettings/Audio_ver1_Vol_custom /data/nvram/APCFG/APRDCL/Audio_ver1_Vol_custom");
-            Toast.makeText(this, R.string.sound_patch_toast, Toast.LENGTH_SHORT).show();
+            if (mSound.isChecked()){
+                RootCmd.RunRootCmd("mount -o remount,rw /data");
+                RootCmd.RunRootCmd("cp -r /system/stocksettings/Audio_ver1_Vol_custom /data/nvram/APCFG/APRDCL/Audio_ver1_Vol_custom");
+                Toast.makeText(this, R.string.sound_patch_toast, Toast.LENGTH_SHORT).show();
+            } else {
+                RootCmd.RunRootCmd("mount -o remount,rw /data");
+                RootCmd.RunRootCmd("rm -rf /data/nvram/APCFG/APRDCL/Audio_ver1_Vol_custom");
+                Toast.makeText(this, R.string.sound_patch_toast, Toast.LENGTH_SHORT).show();
+            }
         }
 
         return false;

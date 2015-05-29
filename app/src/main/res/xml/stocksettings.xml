@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <CheckBoxPreference
+        android:key="sound_patch_key"
+        android:summary="@string/sound_patch_summary"
+        android:title="@string/sound_patch_title" />
+
     <Preference android:title="@string/app_screen_mask_title" android:key="appscreen_key" >
         <intent
             android:targetClass="cn.mixiaoxiao.myappscreenmask.MainActivity"
@@ -13,11 +18,6 @@
         android:digits="1234567890"
         android:key="density_key"
         android:title="@string/density_title"/>
-
-    <Preference
-        android:key="sound_patch_key"
-        android:summary="@string/sound_patch_summary"
-        android:title="@string/sound_patch_title" />
 
     <ListPreference
         android:defaultValue="0"
