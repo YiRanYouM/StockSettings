@@ -38,7 +38,7 @@
         android:entries="@array/camera_entries"
         android:entryValues="@array/camera_values"
         android:key="camera_key"
-        android:title="camera_title" />
+        android:title="@string/camera_title" />
 
     <Preference
         android:summary="© 2015 CP MIUI Tools | Powered by Xs"
