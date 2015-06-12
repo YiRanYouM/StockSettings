@@ -25,5 +25,8 @@
     <string name="dialog_yes">Yes</string>
     <string name="dialog_no">No</string>
     <string name="dialog_reboot">Please restart your mobile phone manually in some time later</string>
+    <string name="camera_title">Camera Switch</string>
+    <string name="camera_miui">MIUI Camera</string>
+    <string name="camera_coolpad">Coolpad Camera</string>
 
 </resources>

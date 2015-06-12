@@ -33,6 +33,13 @@
         android:key="storage_key"
         android:title="@string/storage_title" />
 
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/camera_entries"
+        android:entryValues="@array/camera_values"
+        android:key="camera_key"
+        android:title="camera_title" />
+
     <Preference
         android:summary="© 2015 CP MIUI Tools | Powered by Xs"
         android:title="@string/about_title" >

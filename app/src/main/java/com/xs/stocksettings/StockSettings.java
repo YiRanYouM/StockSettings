@@ -21,10 +21,12 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
     private static final String SOUND = "sound_patch_key";
     private static final String SYSTEMUI = "systemui_style_key";
     private static final String STORAGE = "storage_key";
+    private static final String CAMERA = "camera_key";
 
     private CheckBoxPreference mSound;
     private ListPreference mSystemUI;
     private ListPreference mStorage;
+    private ListPreference mCamera;
     private EditTextPreference mDensity;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,13 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
         mDensity = (EditTextPreference) findPreference("density_key");
         mSystemUI = (ListPreference) findPreference(SYSTEMUI);
         mStorage = (ListPreference) findPreference(STORAGE);
+        mCamera = (ListPreference) findPreference(CAMERA);
         mSystemUI.setOnPreferenceChangeListener(this);
         mStorage.setOnPreferenceChangeListener(this);
+        mCamera.setOnPreferenceChangeListener(this);
         setListPreferenceSummary(mSystemUI);
         setListPreferenceSummary(mStorage);
+        setListPreferenceSummary(mCamera);
 
         mDensity.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -100,9 +105,39 @@ public class StockSettings extends PreferenceActivity implements Preference.OnPr
                 mListPreference.setSummary(R.string.storage_external);
             }
         }
+        if (mListPreference == mCamera) {
+            if (0 == Integer.parseInt(mListPreference.getValue())) {
+                mListPreference.setSummary(R.string.camera_miui);
+            } else {
+                mListPreference.setSummary(R.string.camera_coolpad);
+            }
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (mCamera == preference) {
+            String prefsValueSystemUI = (String) newValue;
+            mCamera.setValue(prefsValueSystemUI);
+            int mode = Integer.parseInt(prefsValueSystemUI);
+            switch (mode) {
+                case 0:
+                    preference.setSummary(R.string.camera_miui);
+                    RootCmd.RunRootCmd("mount -o remount,rw /system");
+                    RootCmd.RunRootCmd("rm -rf /system/priv-app/Camera.apk");
+                    RootCmd.RunRootCmd("cp -f /system/stocksettings/MiuiCamera.apk /system/priv-app/Camera.apk");
+                    RootCmd.RunRootCmd("chmod 0644 /system/priv-app/Camera.apk");
+                    break;
+                case 1:
+                    preference.setSummary(R.string.camera_coolpad);
+                    RootCmd.RunRootCmd("mount -o remount,rw /system");
+                    RootCmd.RunRootCmd("rm -rf /system/priv-app/Camera.apk");
+                    RootCmd.RunRootCmd("cp -f /system/stocksettings/CoolpadCamera.apk /system/priv-app/Camera.apk");
+                    RootCmd.RunRootCmd("chmod 0644 /system/priv-app/Camera.apk");
+                    break;
+                default:
+                    break;
+            }
+        }
         if (mSystemUI == preference) {
             String prefsValueSystemUI = (String) newValue;
             mSystemUI.setValue(prefsValueSystemUI);

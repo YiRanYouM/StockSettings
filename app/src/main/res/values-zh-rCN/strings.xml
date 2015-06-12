@@ -25,5 +25,8 @@
     <string name="dialog_yes">确定</string>
     <string name="dialog_no">取消</string>
     <string name="dialog_reboot">请在稍晚些时刻手动重启手机</string>
+    <string name="camera_title">默认相机切换</string>
+    <string name="camera_miui">MIUI相机</string>
+    <string name="camera_coolpad">酷派相机</string>
 
 </resources>
